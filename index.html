@@ -4,55 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nabeel Ahmed – CV</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { font-family: 'Inter', sans-serif; }
-        @media print {
-            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-            .no-print { display: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 40px 20px;
         }
-        .skill-cat { font-weight: 600; white-space: nowrap; vertical-align: top; padding-right: 1rem; width: 160px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .border-b { border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; margin-bottom: 16px; }
+        .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #0f172a; }
+        .flex-row { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .text-muted { color: #64748b; font-size: 12px; }
+        .text-xs { font-size: 12px; }
+        .mt-1 { margin-top: 4px; }
+        .mb-2 { margin-bottom: 8px; }
+        .mb-4 { margin-bottom: 16px; }
+        .mb-6 { margin-bottom: 24px; }
+        .ml-4 { margin-left: 16px; }
+        .list-disc { list-style-type: disc; padding-left: 20px; }
+        .skill-label { font-weight: 600; width: 160px; display: inline-block; vertical-align: top; }
+        .skill-row { margin-bottom: 4px; }
+        .no-print { display: block; } /* Show button */
+        @media print { .no-print { display: none; } }
+        
+        button {
+            position: fixed; top: 20px; right: 20px; z-index: 50;
+            background: #0f172a; color: white; border: none; padding: 10px 20px;
+            border-radius: 9999px; font-size: 12px; font-weight: 500;
+            cursor: pointer; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        button:hover { background: #1e293b; }
+        a { color: #0f172a; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
-<body class="bg-white text-slate-900 text-sm leading-relaxed">
+<body>
 
-    <!-- Download Button -->
-    <div class="no-print fixed top-4 right-4 z-50">
-        <button onclick="window.print()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-medium px-5 py-2.5 rounded-full transition-colors flex items-center gap-2 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download PDF
-        </button>
-    </div>
+    <button onclick="window.print()">⬇ Download PDF</button>
 
-    <div class="max-w-4xl mx-auto px-8 py-10">
+    <div class="container">
 
-        <!-- Name & Contact -->
+        <!-- Name -->
         <div class="mb-6">
-            <h1 class="text-3xl font-bold tracking-tight text-slate-900">Nabeel Ahmed</h1>
-            <p class="text-slate-500 text-xs mt-2">+46734951602 | nabeelahmed649@gmail.com | Vindelgatan 15B, 77133, Ludvika, Sweden | <a href="https://www.linkedin.com/in/nabeel-ahmed-pmp-®-012700250" class="hover:underline">linkedin.com/in/nabeel-ahmed-pmp-®-012700250</a></p>
+            <h1 style="font-size:28px; font-weight:700; letter-spacing:-0.02em;">Nabeel Ahmed</h1>
+            <p class="text-muted">+46734951602 | nabeelahmed649@gmail.com | Vindelgatan 15B, 77133, Ludvika, Sweden | <a href="https://www.linkedin.com/in/nabeel-ahmed-pmp-%C2%AE-012700250">linkedin.com/in/nabeel-ahmed-pmp-®-012700250</a></p>
         </div>
 
-        <!-- Profile Summary -->
+        <!-- Profile -->
         <div class="mb-6">
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">Profile Summary</h2>
-            <p class="text-slate-600 leading-relaxed">
-                Software engineer with a BSc in Software Engineering and an MS in Information Systems, combined with hands-on industrial operations experience at Northvolt managing real-time critical environment systems. Proficient in C#, Java, Python, and SQL with a strong interest in embedded control systems, digital control technology, and signal processing. Experienced in the full software development lifecycle including coding, testing, verification, and maintenance of software libraries. Based in Ludvika with a genuine interest in the electric power industry and HVDC technology. PMP® certified with a demonstrated sense of ownership, problem-solving initiative, and commitment to safety and integrity in high-stakes environments. Fluent in English with working knowledge of Swedish.
-            </p>
+            <h2 class="section-title border-b">Profile Summary</h2>
+            <p style="color:#475569;">Software engineer with a BSc in Software Engineering and an MS in Information Systems, combined with hands-on industrial operations experience at Northvolt managing real-time critical environment systems. Proficient in C#, Java, Python, and SQL with a strong interest in embedded control systems, digital control technology, and signal processing. Experienced in the full software development lifecycle including coding, testing, verification, and maintenance of software libraries. Based in Ludvika with a genuine interest in the electric power industry and HVDC technology. PMP® certified with a demonstrated sense of ownership, problem-solving initiative, and commitment to safety and integrity in high-stakes environments. Fluent in English with working knowledge of Swedish.</p>
         </div>
 
-        <!-- Professional Experience -->
+        <!-- Experience -->
         <div class="mb-6">
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">Professional Experience</h2>
+            <h2 class="section-title border-b">Professional Experience</h2>
 
             <!-- Northvolt -->
-            <div class="mb-5">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Critical Environment Operations Team Lead</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Oct 2023 – Apr 2025</span>
-                </div>
-                <p class="text-slate-500 text-xs mb-2">Northvolt, Skellefteå, Sweden</p>
-                <ul class="list-disc list-outside text-slate-600 space-y-1 ml-4">
+            <div class="mb-4">
+                <div class="flex-row"><h3 style="font-weight:600;">Critical Environment Operations Team Lead</h3><span class="text-muted">Oct 2023 – Apr 2025</span></div>
+                <p class="text-muted text-xs mb-2">Northvolt, Skellefteå, Sweden</p>
+                <ul class="list-disc" style="color:#475569;">
                     <li>Led a technical team of 15+ engineers and technicians operating 24/7 critical environment production systems, gaining direct experience with real-time control systems, system supervision, and operational monitoring analogous to HVDC control & protection environments.</li>
                     <li>Took full ownership of system stability and performance, independently planning and organizing daily work to ensure continuous operational uptime across 3 critical production lines.</li>
                     <li>Applied Root Cause Analysis (RCA) and data-driven problem-solving to identify and resolve system faults, reducing unplanned downtime by 25 days through structured corrective and preventive actions (CAPA).</li>
@@ -62,13 +78,10 @@
             </div>
 
             <!-- Digital Korbax -->
-            <div class="mb-5">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Software Development Project Manager</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Jan 2021 – Jun 2022</span>
-                </div>
-                <p class="text-slate-500 text-xs mb-2">Digital Korbax, Lahore, Pakistan</p>
-                <ul class="list-disc list-outside text-slate-600 space-y-1 ml-4">
+            <div class="mb-4">
+                <div class="flex-row"><h3 style="font-weight:600;">Software Development Project Manager</h3><span class="text-muted">Jan 2021 – Jun 2022</span></div>
+                <p class="text-muted text-xs mb-2">Digital Korbax, Lahore, Pakistan</p>
+                <ul class="list-disc" style="color:#475569;">
                     <li>Managed the full software development lifecycle (SDLC) for multiple projects, including code development, testing, verification, and maintenance of software libraries and applications.</li>
                     <li>Worked closely with developers on code quality, testing of code changes, and ensuring delivered software met functional and performance requirements.</li>
                     <li>Utilized Agile/Scrum methodologies with Jira to plan sprints, organize daily work, and track progress — demonstrating a strong sense of responsibility and ownership over deliverables.</li>
@@ -78,12 +91,9 @@
 
             <!-- Fiverr -->
             <div>
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Software Developer & Project Manager</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Apr 2019 – Dec 2020</span>
-                </div>
-                <p class="text-slate-500 text-xs mb-2">Fiverr, Remote</p>
-                <ul class="list-disc list-outside text-slate-600 space-y-1 ml-4">
+                <div class="flex-row"><h3 style="font-weight:600;">Software Developer & Project Manager</h3><span class="text-muted">Apr 2019 – Dec 2020</span></div>
+                <p class="text-muted text-xs mb-2">Fiverr, Remote</p>
+                <ul class="list-disc" style="color:#475569;">
                     <li>Developed, tested, and maintained custom software applications for international clients, taking full ownership of code quality from requirements through delivery and post-deployment support.</li>
                     <li>Achieved 100% on-time delivery by independently planning, organizing, and prioritizing daily work across multiple concurrent projects.</li>
                     <li>Took initiative to solve technical challenges directly with stakeholders, streamlining communication and reducing clarification cycles by 30%.</li>
@@ -91,125 +101,37 @@
             </div>
         </div>
 
-        <!-- Education & Certification -->
+        <!-- Education -->
         <div class="mb-6">
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">Education & Certification</h2>
-
-            <!-- PMP -->
-            <div class="mb-3">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Project Management Professional (PMP)®</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">PMI – 2026</span>
-                </div>
-                <p class="text-slate-600 text-xs">Globally recognized credential verifying 4,500+ hours of project leadership experience. Skilled in planning, organizing, and taking ownership of complex work streams using predictive, agile, and hybrid methodologies.</p>
-            </div>
-
-            <!-- Google PM -->
-            <div class="mb-3">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Project Management</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Google – 2025</span>
-                </div>
-                <p class="text-slate-600 text-xs">End-to-end Project Lifecycle Management, Strategic Planning, Risk Mitigation & Quality Management, Data-Driven Execution & KPI Tracking.</p>
-            </div>
-
-            <!-- Google Agile -->
-            <div class="mb-3">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Agile Project Management</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Google – 2025</span>
-                </div>
-                <p class="text-slate-600 text-xs">Proficient in Agile philosophy and Scrum framework, including values, pillars, and team roles. Skilled in managing Product Backlogs, defining value roadmaps, and facilitating key Scrum events.</p>
-            </div>
-
-            <!-- MS -->
-            <div class="mb-3">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">MS Information Systems</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Uppsala University [2022 – 2024]</span>
-                </div>
-                <p class="text-slate-600 text-xs">Introduction to Digital Practices, Developing digital practices, Formal methods, Agile methodologies, C# and Contemporary software development.</p>
-            </div>
-
-            <!-- BSc -->
-            <div>
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Bachelors in Software Engineering</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">University of Management and Technology [2016 – 2020]</span>
-                </div>
-                <p class="text-slate-600 text-xs">Software design and development, Software quality and testing, Software requirement and specification, Website development, Android Apps, Jira, GitHub repositories.</p>
-            </div>
+            <h2 class="section-title border-b">Education & Certification</h2>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">Project Management Professional (PMP)®</h3><span class="text-muted">PMI – 2026</span></div><p class="text-muted text-xs">Globally recognized credential verifying 4,500+ hours of project leadership experience. Skilled in planning, organizing, and taking ownership of complex work streams using predictive, agile, and hybrid methodologies.</p></div>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">Project Management</h3><span class="text-muted">Google – 2025</span></div><p class="text-muted text-xs">End-to-end Project Lifecycle Management, Strategic Planning, Risk Mitigation & Quality Management, Data-Driven Execution & KPI Tracking.</p></div>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">Agile Project Management</h3><span class="text-muted">Google – 2025</span></div><p class="text-muted text-xs">Proficient in Agile philosophy and Scrum framework, including values, pillars, and team roles. Skilled in managing Product Backlogs, defining value roadmaps, and facilitating key Scrum events.</p></div>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">MS Information Systems</h3><span class="text-muted">Uppsala University [2022 – 2024]</span></div><p class="text-muted text-xs">Introduction to Digital Practices, Developing digital practices, Formal methods, Agile methodologies, C# and Contemporary software development.</p></div>
+            <div><div class="flex-row"><h3 style="font-weight:600;">Bachelors in Software Engineering</h3><span class="text-muted">University of Management and Technology [2016 – 2020]</span></div><p class="text-muted text-xs">Software design and development, Software quality and testing, Software requirement and specification, Website development, Android Apps, Jira, GitHub repositories.</p></div>
         </div>
 
-        <!-- Key Skills & Expertise -->
+        <!-- Skills -->
         <div class="mb-6">
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">Key Skills & Expertise</h2>
-            <table class="w-full text-xs text-slate-600">
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Programming</td>
-                    <td class="py-1">C#, Java, Python, C++ (Foundational), SQL</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Software Development</td>
-                    <td class="py-1">Full SDLC, Code Maintenance & Development, Testing & Verification, Unit Testing, Agile / Scrum, Git / GitHub, Jira</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Control & Signal Processing</td>
-                    <td class="py-1">Digital Control Technology (strong interest), Signal Processing (strong interest), Real-Time System Monitoring, System Supervision</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Power Industry</td>
-                    <td class="py-1">HVDC Technology (keen interest), Electric Power Systems, Industrial Automation, Power Infrastructure Operations</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Quality & Safety</td>
-                    <td class="py-1">ISO 9001 Compliance, Lean Six Sigma, Root Cause Analysis (RCA), CAPA Management, Safety & Integrity Culture</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Tools & Platforms</td>
-                    <td class="py-1">Azure DevOps, MATLAB, Power BI, SQL Server, MS Project, ERP Systems, REST & Open APIs, UML Diagrams</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Languages</td>
-                    <td class="py-1">English (Fluent — work proficiency, written and spoken), Swedish (Working knowledge)</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="skill-cat text-slate-900 py-1">Soft Skills</td>
-                    <td class="py-1">Ownership & Responsibility, Independent Planning & Organization, Problem-Solving Initiative, Stakeholder Collaboration, Cross-functional Teamwork, Multicultural Communication</td>
-                </tr>
-            </table>
+            <h2 class="section-title border-b">Key Skills & Expertise</h2>
+            <div class="skill-row"><span class="skill-label">Programming</span> C#, Java, Python, C++ (Foundational), SQL</div>
+            <div class="skill-row"><span class="skill-label">Software Development</span> Full SDLC, Code Maintenance & Development, Testing & Verification, Unit Testing, Agile / Scrum, Git / GitHub, Jira</div>
+            <div class="skill-row"><span class="skill-label">Control & Signal Processing</span> Digital Control Technology (strong interest), Signal Processing (strong interest), Real-Time System Monitoring, System Supervision</div>
+            <div class="skill-row"><span class="skill-label">Power Industry</span> HVDC Technology (keen interest), Electric Power Systems, Industrial Automation, Power Infrastructure Operations</div>
+            <div class="skill-row"><span class="skill-label">Quality & Safety</span> ISO 9001 Compliance, Lean Six Sigma, Root Cause Analysis (RCA), CAPA Management, Safety & Integrity Culture</div>
+            <div class="skill-row"><span class="skill-label">Tools & Platforms</span> Azure DevOps, MATLAB, Power BI, SQL Server, MS Project, ERP Systems, REST & Open APIs, UML Diagrams</div>
+            <div class="skill-row"><span class="skill-label">Languages</span> English (Fluent — work proficiency, written and spoken), Swedish (Working knowledge)</div>
+            <div class="skill-row"><span class="skill-label">Soft Skills</span> Ownership & Responsibility, Independent Planning & Organization, Problem-Solving Initiative, Stakeholder Collaboration, Cross-functional Teamwork, Multicultural Communication</div>
         </div>
 
-        <!-- Notable Projects -->
+        <!-- Projects -->
         <div>
-            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-1 mb-3">Notable Projects</h2>
-
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Trainer Central at Companion</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Sep 2022 – Jan 2023</span>
-                </div>
-                <p class="text-slate-600 text-xs">Managed development, testing, and maintenance of a web-based training platform with cloud-infrastructure automation. Delivered 3 weeks early; platform adopted by 200+ trainers.</p>
-            </div>
-
-            <div class="mb-4">
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">Uppsala Hub at Uppsala University</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Jan 2023 – Apr 2023</span>
-                </div>
-                <p class="text-slate-600 text-xs">Led development and testing of a data-driven website utilizing SQL Server and Jira. Reduced database query time by 40% through schema optimization and performance verification.</p>
-            </div>
-
-            <div>
-                <div class="flex justify-between items-baseline">
-                    <h3 class="font-semibold text-slate-900">JAGUAR at University of Management and Technology</h3>
-                    <span class="text-slate-400 text-xs whitespace-nowrap ml-4">Sep 2019 – Jun 2020</span>
-                </div>
-                <p class="text-slate-600 text-xs">Developed and tested an Android app + website with Google Maps integration and real-time tracking. Achieved 500+ downloads in first 2 months, 4.5★ rating on Play Store.</p>
-            </div>
+            <h2 class="section-title border-b">Notable Projects</h2>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">Trainer Central at Companion</h3><span class="text-muted">Sep 2022 – Jan 2023</span></div><p class="text-muted text-xs">Managed development, testing, and maintenance of a web-based training platform with cloud-infrastructure automation. Delivered 3 weeks early; platform adopted by 200+ trainers.</p></div>
+            <div class="mb-2"><div class="flex-row"><h3 style="font-weight:600;">Uppsala Hub at Uppsala University</h3><span class="text-muted">Jan 2023 – Apr 2023</span></div><p class="text-muted text-xs">Led development and testing of a data-driven website utilizing SQL Server and Jira. Reduced database query time by 40% through schema optimization and performance verification.</p></div>
+            <div><div class="flex-row"><h3 style="font-weight:600;">JAGUAR at University of Management and Technology</h3><span class="text-muted">Sep 2019 – Jun 2020</span></div><p class="text-muted text-xs">Developed and tested an Android app + website with Google Maps integration and real-time tracking. Achieved 500+ downloads in first 2 months, 4.5★ rating on Play Store.</p></div>
         </div>
 
     </div>
-
 </body>
 </html>
