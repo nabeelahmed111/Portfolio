@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabeel Ahmed — Business & Functional Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+        }
+        .skill-tag { transition: all 200ms ease; }
+        .skill-tag:hover { background-color: #0F172A; color: #FFFFFF; }
+        .timeline-item { position: relative; padding-left: 32px; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #E2E8F0;
+            border: 2px solid #94A3B8;
+            transition: all 200ms ease;
+        }
+        .timeline-item:hover::before {
+            background: #0F172A;
+            border-color: #0F172A;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 24px;
+            width: 2px;
+            height: calc(100% - 16px);
+            background: #E2E8F0;
+        }
+        .timeline-item:last-child::after { display: none; }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-slate-900 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 h-20 bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 no-print">
+        <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+            <span class="text-sm font-semibold tracking-tight text-slate-900">Nabeel Ahmed</span>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#profile" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150">Profile</a>
+                <a href="#experience" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150">Experience</a>
+                <a href="#skills" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150">Skills</a>
+                <a href="#education" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150">Education</a>
+                <a href="#projects" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150">Projects</a>
+            </div>
+            <a href="mailto:nabeelahmed649@gmail.com" class="bg-slate-950 hover:bg-slate-800 text-white text-xs font-medium px-5 py-2.5 rounded-lg transition-colors duration-150">
+                Contact Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="profile" class="pt-32 lg:pt-40 pb-16 lg:pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                <div class="fade-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 mb-6">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs font-medium text-slate-600 tracking-wide uppercase">Available from August 3rd</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight text-slate-900 mb-6">
+                        Business &<br>Functional Analyst
+                    </h1>
+                    <p class="text-lg text-slate-500 leading-relaxed max-w-xl mb-8">
+                        Certified PMP® with a Master's in Information Systems and a software engineering background. Specialized in bridging business and IT — translating regulatory and financial requirements into test scenarios, validating data quality with SQL, and ensuring go-live readiness in regulated environments.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="mailto:nabeelahmed649@gmail.com" class="inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-800 text-white text-sm font-medium px-6 py-3 rounded-lg transition-colors duration-150">
+                            <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                            Get in Touch
+                        </a>
+                        <a href="https://www.linkedin.com/in/nabeel-ahmed-pmp-®-012700250" target="_blank" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-900 text-sm font-medium px-6 py-3 rounded-lg border border-slate-200 transition-colors duration-150">
+                            <iconify-icon icon="lucide:linkedin" width="16"></iconify-icon>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Card -->
+                <div class="fade-up bg-slate-50 rounded-2xl p-8 lg:p-10">
+                    <h3 class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-6">Contact Details</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:phone" width="18" class="text-slate-400 mt-0.5 shrink-0"></iconify-icon>
+                            <div>
+                                <p class="text-sm font-medium text-slate-900">+46 734 951 602</p>
+                                <p class="text-xs text-slate-400">Mobile</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:mail" width="18" class="text-slate-400 mt-0.5 shrink-0"></iconify-icon>
+                            <div>
+                                <p class="text-sm font-medium text-slate-900">nabeelahmed649@gmail.com</p>
+                                <p class="text-xs text-slate-400">Email</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:map-pin" width="18" class="text-slate-400 mt-0.5 shrink-0"></iconify-icon>
+                            <div>
+                                <p class="text-sm font-medium text-slate-900">Vindelgatan 15B, 77133</p>
+                                <p class="text-xs text-slate-400">Ludvika, Sweden</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:linkedin" width="18" class="text-slate-400 mt-0.5 shrink-0"></iconify-icon>
+                            <div>
+                                <p class="text-sm font-medium text-slate-900">linkedin.com/in/nabeel-ahmed-pmp</p>
+                                <p class="text-xs text-slate-400">Profile</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-6 border-slate-200">
+                    <h3 class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-4">Key Highlights</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white rounded-xl p-4 border border-slate-100">
+                            <p class="text-2xl font-semibold text-slate-900 tracking-tight">4+</p>
+                            <p class="text-xs text-slate-400 mt-1">Years Experience</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-slate-100">
+                            <p class="text-2xl font-semibold text-slate-900 tracking-tight">100%</p>
+                            <p class="text-xs text-slate-400 mt-1">Compliance Track</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-slate-100">
+                            <p class="text-2xl font-semibold text-slate-900 tracking-tight">PMP®</p>
+                            <p class="text-xs text-slate-400 mt-1">Certified</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 border border-slate-100">
+                            <p class="text-2xl font-semibold text-slate-900 tracking-tight">SQL</p>
+                            <p class="text-xs text-slate-400 mt-1">Data Validation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me — Targeted to the Role -->
+    <section class="py-16 px-6 bg-slate-950">
+        <div class="max-w-7xl mx-auto fade-up">
+            <div class="text-center mb-12">
+                <p class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-3">Why This Role</p>
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight">Aligned to What You Need</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-200">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:shield-check" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">Regulated Environments</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">ISO 9001, environmental standards, and regulatory compliance at Siemens and Northvolt — 100% compliance record across critical operations.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-200">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:database" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">SQL Data Validation</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Hands-on SQL for data analysis, schema optimization, query performance, and root-cause investigations across multiple projects.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-200">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:bar-chart-3" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">Business Rules & KPIs</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Defined and validated business rules, KPIs, and reporting definitions using Power BI — reduced reporting time by 40% at Siemens.</p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-200">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                        <iconify-icon icon="lucide:git-branch" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-white mb-2">Bridge Business & IT</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Software engineering background + project management expertise = fluent in both technical execution and business requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 fade-up">
+                <p class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-3">Career History</p>
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Professional Experience</h2>
+            </div>
+
+            <div class="max-w-4xl space-y-10">
+
+                <!-- Siemens -->
+                <div class="timeline-item fade-up">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-medium text-slate-900">Business Data & Reporting Analyst</h3>
+                        <span class="text-xs font-medium text-slate-400 tracking-wide">Nov 2025 – Feb 2026</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 mb-4">Siemens Sweden — Urban Rail Expansion</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Analyzed and validated strategic KPIs for regulatory and sustainability reporting, ensuring data accuracy across installation rates, electrification adoption, and emissions reduction metrics.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Designed and built executive dashboards using Power BI and Excel, translating complex business rules into clear visual reporting — <strong class="text-slate-900">reduced reporting time by 40%</strong>.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Acted as bridge between engineering teams and management stakeholders, validating that reported data aligned with business definitions and project governance requirements.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Northvolt -->
+                <div class="timeline-item fade-up">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-medium text-slate-900">Quality & Compliance Operations Lead</h3>
+                        <span class="text-xs font-medium text-slate-400 tracking-wide">Oct 2023 – Apr 2025</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 mb-4">Northvolt Skellefteå Sweden — Critical Environment Production</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Ensured <strong class="text-slate-900">100% compliance</strong> with ISO 9001, environmental standards, and regulatory requirements across 3 critical production lines — direct experience in regulated, audit-driven environments.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Conducted Root Cause Analysis (RCA) and corrective action (CAPA) investigations using Six Sigma methodologies — systematic approach to identifying data anomalies and process deviations analogous to data quality issue resolution.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Established and enforced quality standards, coached teams through continuous improvement — <strong class="text-slate-900">minimized unplanned downtime by 25 days</strong> through data-driven process validation.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Documented compliance findings, maintained audit-ready records, and supported go-live readiness for new production line introductions — directly transferable to UAT documentation and go-live preparation.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Digital Korbax -->
+                <div class="timeline-item fade-up">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-medium text-slate-900">Functional Analyst & Project Manager</h3>
+                        <span class="text-xs font-medium text-slate-400 tracking-wide">Jan 2021 – Jun 2022</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 mb-4">Digital Korbax Lahore, Pakistan — Software Development (NPD)</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Translated business requirements into functional specifications, user stories, and test scenarios for multiple client projects — core skill for UAT test design in this role.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Managed scope definition, requirement validation, and acceptance criteria with cross-functional teams using Agile/Scrum (Jira, Asana) — <strong class="text-slate-900">increased client satisfaction from 4.2 to 4.7/5</strong>.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Implemented metrics-driven validation and acceptance processes, reducing budget overruns by 12% — experience in defining and tracking quality gates ahead of delivery.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fiverr -->
+                <div class="timeline-item fade-up">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                        <h3 class="text-lg font-medium text-slate-900">IT Business Analyst & Project Manager</h3>
+                        <span class="text-xs font-medium text-slate-400 tracking-wide">Apr 2019 – Dec 2020</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 mb-4">Fiverr Co. — Remote, International Clients</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Bridged international business stakeholders (US, UAE, UK) with technical development teams, validating that deliverables met business requirements — <strong class="text-slate-900">100% on-time delivery</strong>.</p>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <iconify-icon icon="lucide:check-circle-2" width="16" class="text-emerald-500 mt-1 shrink-0"></iconify-icon>
+                            <p class="text-sm text-slate-600 leading-relaxed">Streamlined requirement clarification cycles by 30%, demonstrating ability to resolve ambiguity between business expectations and technical implementation.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 fade-up">
+                <p class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-3">Expertise</p>
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Skills & Competencies</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
+
+                <!-- Core Role Skills -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:target" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Business & Functional Analysis</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Requirements Analysis</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Business Rules Validation</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">UAT Test Design</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Functional Flows</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Acceptance Criteria</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Stakeholder Mapping</span>
+                    </div>
+                </div>
+
+                <!-- Data & SQL -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:database" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Data Validation & SQL</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">SQL Queries</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Schema Optimization</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Data Quality Checks</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Root-Cause Analysis</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">SQL Server</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Compliance & Quality -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:shield-check" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Compliance & Quality</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">ISO 9001</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Regulatory Standards</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">CAPA Management</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Lean Six Sigma</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Go-Live Readiness</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Audit Documentation</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:layout-dashboard" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Jira</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Power BI</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">MS Project</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Excel (Advanced)</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Azure</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Asana</span>
+                    </div>
+                </div>
+
+                <!-- Technical -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:code-2" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Technical Foundation</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Python</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Java</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">C#</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">REST APIs</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">UML Diagrams</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Unit Testing</span>
+                    </div>
+                </div>
+
+                <!-- Personal Skills -->
+                <div class="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center mb-5">
+                        <iconify-icon icon="lucide:heart-handshake" width="20" class="text-white"></iconify-icon>
+                    </div>
+                    <h3 class="text-base font-medium text-slate-900 mb-4">Personal Competencies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 cursor-default border border-emerald-100">Change-Oriented</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 cursor-default border border-emerald-100">Goal-Oriented</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 cursor-default border border-emerald-100">Stable</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 cursor-default border border-emerald-100">Responsible</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Cross-Functional Leadership</span>
+                        <span class="skill-tag text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 cursor-default">Multicultural Communication</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 fade-up">
+                <p class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-3">Qualifications</p>
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Education & Certifications</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 fade-up">
+
+                <!-- Certifications -->
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-6">Certifications</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h4 class="text-base font-medium text-slate-900">Project Management Professional (PMP)®</h4>
+                                    <p class="text-sm text-slate-500">Project Management Institute</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-400 shrink-0 ml-4">2026</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-2">Globally recognized credential verifying 4,500+ hours of project leadership. Proficient in predictive, agile, and hybrid methodologies — stakeholder engagement, risk management, and quality governance.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h4 class="text-base font-medium text-slate-900">Project Management</h4>
+                                    <p class="text-sm text-slate-500">Google</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-400 shrink-0 ml-4">2025</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-2">End-to-end lifecycle management, strategic planning, risk mitigation, quality management, and data-driven execution with KPI tracking.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h4 class="text-base font-medium text-slate-900">Agile Project Management</h4>
+                                    <p class="text-sm text-slate-500">Google</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-400 shrink-0 ml-4">2025</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-2">Scrum framework, product backlog management, value roadmaps, and coaching teams through Agile adoption — directly applicable to iterative UAT cycles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-6">Education</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h4 class="text-base font-medium text-slate-900">Master of Science — Information Systems</h4>
+                                    <p class="text-sm text-slate-500">Uppsala University</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-400 shrink-0 ml-4">2022–2024</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-2">Digital practices, formal methods, Agile methodologies, C#, and contemporary software development. Strong foundation in data structures and systems thinking.</p>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                            <div class="flex items-start justify-between mb-2">
+                                <div>
+                                    <h4 class="text-base font-medium text-slate-900">Bachelor — Software Engineering</h4>
+                                    <p class="text-sm text-slate-500">University of Management & Technology</p>
+                                </div>
+                                <span class="text-xs font-medium text-slate-400 shrink-0 ml-4">2016–2020</span>
+                            </div>
+                            <p class="text-sm text-slate-500 leading-relaxed mt-2">Software requirements & specification, software quality & testing, database design, and full-stack development — technical depth to understand data at the schema level.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Projects -->
+    <section id="projects" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 fade-up">
+                <p class="text-xs font-medium tracking-widest uppercase text-slate-400 mb-3">Portfolio</p>
+                <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Notable Projects</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 fade-up">
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://picsum.photos/seed/trainer-central/600/340.jpg" alt="Trainer Central" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-base font-medium text-slate-900">Trainer Central</h3>
+                            <span class="text-xs text-slate-400">Companion</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-3">Sep 2022 – Jan 2023</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">Managed requirements, cloud-infrastructure automation, and validation for a web-based training platform. Delivered 3 weeks early; adopted by 200+ trainers.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://picsum.photos/seed/upsala-hub/600/340.jpg" alt="Uppsala Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-base font-medium text-slate-900">Uppsala Hub</h3>
+                            <span class="text-xs text-slate-400">Uppsala University</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-3">Jan 2023 – Apr 2023</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">Led data collection, SQL Server schema design, and validation — <strong class="text-slate-900">reduced query time by 40%</strong> through optimization. End-to-end data ownership.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://picsum.photos/seed/jaguar-app/600/340.jpg" alt="JAGUAR App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-base font-medium text-slate-900">JAGUAR</h3>
+                            <span class="text-xs text-slate-400">UMT</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-3">Sep 2019 – Jun 2020</p>
+                        <p class="text-sm text-slate-500 leading-relaxed">Directed full design and development of Android app + website with real-time tracking integration. 500+ downloads in 2 months, 4.5★ on Play Store.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-3xl mx-auto text-center fade-up">
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">Ready to Contribute from Day One</h2>
+            <p class="text-lg text-slate-500 leading-relaxed mb-8">
+                My combination of regulated-environment compliance experience, SQL-based data validation skills, and a track record of bridging business and technical teams makes me a strong fit for ensuring data quality and go-live readiness in this centralization initiative.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:nabeelahmed649@gmail.com" class="inline-flex items-center gap-2 bg-slate-950 hover:bg-slate-800 text-white text-sm font-medium px-8 py-3.5 rounded-lg transition-colors duration-150">
+                    <iconify-icon icon="lucide:mail" width="16"></iconify-icon>
+                    nabeelahmed649@gmail.com
+                </a>
+                <a href="tel:+46734951602" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-900 text-sm font-medium px-8 py-3.5 rounded-lg border border-slate-200 transition-colors duration-150">
+                    <iconify-icon icon="lucide:phone" width="16"></iconify-icon>
+                    +46 734 951 602
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-slate-400">© 2025 Nabeel Ahmed. All rights reserved.</p>
+            <p class="text-xs text-slate-400">Background check ready — police record & credit check available upon request.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            // Smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Nav background on scroll
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    nav.classList.add('shadow-sm');
+                } else {
+                    nav.classList.remove('shadow-sm');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
